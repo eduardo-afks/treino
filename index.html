@@ -21,18 +21,15 @@
         <div class="auth-card">
           <span class="brand-mark auth-mark">DF</span>
           <p class="eyebrow">ACESSO PESSOAL</p>
-          <h1>Entre no <span>Dudu Fitness</span></h1>
-          <p class="muted">Use seu e-mail para salvar seus treinos na nuvem.</p>
+          <h1>Bem-vindo ao <span>Dudu Fitness</span></h1>
+          <p class="muted">Digite seu nome para continuar.</p>
           <form id="auth-form">
-            <label for="auth-email">E-mail</label>
-            <input id="auth-email" type="email" autocomplete="email" required placeholder="voce@email.com">
-            <label for="auth-password">Senha</label>
-            <input id="auth-password" type="password" autocomplete="current-password" minlength="6" required placeholder="Mínimo de 6 caracteres">
+            <label for="auth-username">Nome de usuário</label>
+            <input id="auth-username" type="text" autocomplete="username" required placeholder="Digite eduardo" maxlength="40">
             <button class="button primary auth-submit" id="auth-submit" type="submit">ENTRAR</button>
           </form>
-          <button class="text-button" id="auth-toggle" type="button">Ainda não tenho conta — criar conta</button>
           <p id="auth-message" class="auth-message" role="status"></p>
-          <p class="auth-small">A conta é usada para manter seu histórico privado. Não compartilhe sua senha.</p>
+          <p class="auth-small">Acesso simplificado: o nome não é uma senha e não protege o site de outras pessoas. A autenticação anônima do Supabase precisa estar habilitada para salvar os treinos na nuvem.</p>
         </div>
       </section>
       <section id="view-home" class="view active">

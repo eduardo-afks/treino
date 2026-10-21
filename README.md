@@ -30,3 +30,11 @@
 
 ## Correção de tela em branco / GitHub Pages
 Esta versão corrige um problema que escondia todo o elemento `main` quando o usuário ainda não estava autenticado. O formulário de login agora deve aparecer. Ao enviar para o GitHub Pages, envie os arquivos que estão dentro desta pasta diretamente para a raiz da branch configurada: `index.html`, `styles.css`, `app.js`, `supabase-config.js` e a pasta `supabase`. Não envie apenas o ZIP e não deixe `index.html` enterrado dentro de uma subpasta.
+
+
+## GIFs demonstrativos nos exercícios
+Os GIFs dos exercícios agora são exibidos e animados diretamente dentro de cada cartão, entre o nome do exercício e as séries/repetições. Eles vêm de URLs externas; se um servidor bloquear a exibição, o cartão mostra uma mensagem com link para abrir a demonstração.
+
+
+## Login simplificado por nome
+A tela aceita somente `eduardo` e usa autenticação anônima do Supabase para gravar sessões com as políticas RLS atuais. No painel Supabase, habilite Authentication > Sign In / Providers > Anonymous Sign-Ins. **Atenção:** digitar apenas um nome não é autenticação segura; qualquer pessoa que conheça o nome poderá entrar. A sessão anônima fica vinculada ao navegador/dispositivo e não é recuperável por e-mail.
