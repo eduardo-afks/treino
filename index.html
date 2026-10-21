@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0d">
+  <title>Dudu Fitness</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" data-view="home" aria-label="Dudu Fitness início">
+        <span class="brand-mark">DF</span><span>DUDU <b>FITNESS</b></span>
+      </a>
+      <span class="status-pill"><i></i> SEU TREINO, SUA EVOLUÇÃO</span>
+    </header>
+
+    <main>
+      <section id="auth-panel" class="auth-panel" hidden>
+        <div class="auth-card">
+          <span class="brand-mark auth-mark">DF</span>
+          <p class="eyebrow">ACESSO PESSOAL</p>
+          <h1>Entre no <span>Dudu Fitness</span></h1>
+          <p class="muted">Use seu e-mail para salvar seus treinos na nuvem.</p>
+          <form id="auth-form">
+            <label for="auth-email">E-mail</label>
+            <input id="auth-email" type="email" autocomplete="email" required placeholder="voce@email.com">
+            <label for="auth-password">Senha</label>
+            <input id="auth-password" type="password" autocomplete="current-password" minlength="6" required placeholder="Mínimo de 6 caracteres">
+            <button class="button primary auth-submit" id="auth-submit" type="submit">ENTRAR</button>
+          </form>
+          <button class="text-button" id="auth-toggle" type="button">Ainda não tenho conta — criar conta</button>
+          <p id="auth-message" class="auth-message" role="status"></p>
+          <p class="auth-small">A conta é usada para manter seu histórico privado. Não compartilhe sua senha.</p>
+        </div>
+      </section>
+      <section id="view-home" class="view active">
+        <div class="hero">
+          <p class="eyebrow">FOCO • CONSISTÊNCIA • EVOLUÇÃO</p>
+          <h1>Seu próximo nível<br>começa <span>hoje.</span></h1>
+          <p class="muted">Registre cada série. Acompanhe cada conquista.</p>
+          <button class="button primary" id="home-start">VER TREINOS <span>↗</span></button>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">PAINEL</p><h2>Seu progresso</h2></div></div>
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon">▣</span><p>Treinos concluídos</p><strong id="stat-workouts">0</strong><small>desde o primeiro registro</small></article>
+          <article class="stat-card"><span class="stat-icon">↗</span><p>Último treino</p><strong id="stat-last">—</strong><small id="stat-last-date">Comece quando quiser</small></article>
+        </div>
+        <article class="next-card">
+          <div><p class="eyebrow">ROTINA SEMANAL</p><h3 id="today-title">Treino de hoje</h3><p class="muted" id="today-desc">Escolha um dia para ver os exercícios.</p></div>
+          <button class="button secondary" id="home-week">ESCOLHER DIA</button>
+        </article>
+      </section>
+
+      <section id="view-workouts" class="view">
+        <div class="page-intro"><p class="eyebrow">SUA ROTINA</p><h1>Escolha o <span>treino</span></h1><p class="muted">Os exercícios aparecem somente depois que você seleciona um dia.</p></div>
+        <div class="day-list" id="day-list"></div>
+      </section>
+
+      <section id="view-session" class="view">
+        <button class="back-button" id="back-days">← Todos os dias</button>
+        <div class="page-intro"><p class="eyebrow" id="session-kicker">TREINO DO DIA</p><h1 id="session-title">Treino</h1><p class="muted" id="session-subtitle"></p></div>
+        <div class="session-notice">Registre o peso e as repetições de cada série pesada. Seus registros ficam salvos neste navegador.</div>
+        <div id="exercise-list" class="exercise-list"></div>
+        <div class="finish-panel">
+          <div><p class="eyebrow">FIM DO TREINO</p><h2>Terminou por hoje?</h2><p class="muted">Conclua para guardar a sessão no histórico.</p></div>
+          <button class="button primary" id="finish-workout">CONCLUIR TREINO ✓</button>
+        </div>
+      </section>
+
+      <section id="view-progress" class="view">
+        <div class="page-intro"><p class="eyebrow">DADOS REAIS, EVOLUÇÃO REAL</p><h1>Sua <span>evolução</span></h1><p class="muted">Compare seus registros anteriores por exercício.</p></div>
+        <div class="progress-summary stats-grid">
+          <article class="stat-card"><p>Sessões concluídas</p><strong id="progress-count">0</strong></article>
+          <article class="stat-card"><p>Exercícios registrados</p><strong id="progress-exercises">0</strong></article>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">HISTÓRICO</p><h2>Treinos concluídos</h2></div><button class="text-button" id="export-data">Exportar dados ↗</button></div>
+        <div id="history-list" class="history-list"></div>
+        <div class="section-heading"><div><p class="eyebrow">COMPARAÇÃO</p><h2>Cargas por exercício</h2></div></div>
+        <div id="comparison-list" class="comparison-list"></div>
+        <p class="privacy-note">Os dados são armazenados localmente neste navegador. Use “Exportar dados” para fazer uma cópia de segurança. Para sincronizar entre dispositivos, será necessário conectar um backend/banco de dados.</p>
+        <button class="button danger-outline" id="clear-data">Apagar histórico local</button>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <button class="nav-item active" data-view="home"><span>⌂</span>Início</button>
+      <button class="nav-item" data-view="workouts"><span>▦</span>Treinos</button>
+      <button class="nav-item" data-view="progress"><span>↗</span>Evolução</button>
+    </nav>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
