@@ -26,3 +26,7 @@
 - Os GIFs são links externos e podem mudar ou ficar indisponíveis.
 - O exercício “Tríceps na polia com barra W” está sem GIF porque o link fornecido anteriormente era para barra reta, não W.
 - O exercício de supino inclinado foi mantido com 6 séries de aquecimento conforme informado na conversa; confirme se era isso mesmo antes de usar.
+
+
+## Correção de tela em branco / GitHub Pages
+Esta versão corrige um problema que escondia todo o elemento `main` quando o usuário ainda não estava autenticado. O formulário de login agora deve aparecer. Ao enviar para o GitHub Pages, envie os arquivos que estão dentro desta pasta diretamente para a raiz da branch configurada: `index.html`, `styles.css`, `app.js`, `supabase-config.js` e a pasta `supabase`. Não envie apenas o ZIP e não deixe `index.html` enterrado dentro de uma subpasta.
