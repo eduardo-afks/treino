@@ -5,12 +5,4 @@
 
 .auth-panel{position:fixed;inset:0;z-index:50;background:#09090bf5;display:grid;place-items:center;padding:20px;overflow:auto}.auth-panel[hidden]{display:none}.auth-card{width:min(100%,430px);padding:30px;background:linear-gradient(145deg,#19191f,#101014);border:1px solid var(--line);border-radius:20px;box-shadow:0 25px 90px #0009}.auth-mark{margin-bottom:22px}.auth-card h1{font-size:32px;letter-spacing:-1px;line-height:1.1;margin:0 0 12px}.auth-card h1 span{color:var(--orange)}.auth-card>.muted{font-size:13px;margin-bottom:22px}.auth-card label{display:block;font-size:11px;color:#c5c5ce;margin:15px 0 7px}.auth-card input{display:block;width:100%;padding:12px 13px;background:#09090c;color:var(--text);border:1px solid #383840;border-radius:9px;outline:none}.auth-card input:focus{border-color:var(--orange)}.auth-submit{width:100%;margin-top:20px}.auth-card .text-button{display:block;margin:10px auto 0}.auth-message{font-size:12px;color:var(--orange2);min-height:18px}.auth-small{font-size:10px;color:#777783;line-height:1.6}.account-controls{display:flex;align-items:center;gap:12px}.account-email{font-size:11px;color:var(--muted);max-width:180px;overflow:hidden;text-overflow:ellipsis}.signout-button{background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--muted);padding:7px 10px;font-size:10px;font-weight:800}.session-notice{line-height:1.5}
 
-
-/* Demonstração animada do exercício dentro do cartão */
-.exercise-demo{margin:14px 0 16px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#09090b;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:150px;padding:10px}
-.exercise-gif{display:block;width:100%;max-width:420px;max-height:300px;object-fit:contain;border-radius:8px}
-.gif-caption{display:block;width:100%;text-align:center;color:var(--orange2);font-size:.68rem;font-weight:800;letter-spacing:1.2px;padding:9px 4px 2px}
-.gif-unavailable{min-height:74px;color:var(--muted);font-size:.85rem;text-align:center}
-.gif-error{color:var(--muted);text-align:center;font-size:.9rem}
-.gif-error a{color:var(--orange2)}
-@media(max-width:600px){.exercise-demo{min-height:120px;margin:10px 0 14px;padding:7px}.exercise-gif{max-height:240px}.gif-caption{font-size:.62rem}}
+.exercise-gif-wrap{display:flex;align-items:center;justify-content:center;margin:0 0 15px;background:#09090c;border:1px solid var(--line);border-radius:10px;overflow:hidden;min-height:120px}.exercise-gif{display:block;width:100%;max-width:360px;max-height:260px;object-fit:contain}.gif-unavailable{padding:18px;color:var(--muted);font-size:12px}

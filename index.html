@@ -17,21 +17,6 @@
     </header>
 
     <main>
-      <section id="auth-panel" class="auth-panel" hidden>
-        <div class="auth-card">
-          <span class="brand-mark auth-mark">DF</span>
-          <p class="eyebrow">ACESSO PESSOAL</p>
-          <h1>Bem-vindo ao <span>Dudu Fitness</span></h1>
-          <p class="muted">Digite seu nome para continuar.</p>
-          <form id="auth-form">
-            <label for="auth-username">Nome de usuário</label>
-            <input id="auth-username" type="text" autocomplete="username" required placeholder="Digite eduardo" maxlength="40">
-            <button class="button primary auth-submit" id="auth-submit" type="submit">ENTRAR</button>
-          </form>
-          <p id="auth-message" class="auth-message" role="status"></p>
-          <p class="auth-small">Acesso simplificado: o nome não é uma senha e não protege o site de outras pessoas. A autenticação anônima do Supabase precisa estar habilitada para salvar os treinos na nuvem.</p>
-        </div>
-      </section>
       <section id="view-home" class="view active">
         <div class="hero">
           <p class="eyebrow">FOCO • CONSISTÊNCIA • EVOLUÇÃO</p>
@@ -88,8 +73,6 @@
     </nav>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase-config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
